@@ -37,15 +37,15 @@ print(f'Total Months: ' + str(len(Months_list)))
 print(f'Total: $' + str(total))
 print('Average Change: $' +
       '{: .2f}'.format(int(sum(res) - res[0])/(len(Months_list)-1)))
-print('Greatest Decrease in Profits: ' +
-      str(Months_list[int(minIndex)]) + ' $' + str(minVal))
 print('Greatest Increase in Profits: ' +
       str(Months_list[int(maxIndex)]) + ' $' + str(maxVal))
+print('Greatest Decrease in Profits: ' +
+      str(Months_list[int(minIndex)]) + ' $' + str(minVal))
 
 import sys
 output_path = os.path.join(
     "/Users/specky3512/GitHub/Python-Challenge/PyBank/analysis", 'Financial_Analysis.txt')
-file = open(output_path, 'a')
+file = open(output_path, 'w')
 sys.stdout = file
 
 #Print out of found values
@@ -55,8 +55,8 @@ print(f'-'*50)
 print(f'Total Months: ' + str(len(Months_list)))
 print(f'Total: $' + str(total))
 print('Average Change: $' + '{: .2f}'.format(int(sum(res) - res[0])/(len(Months_list)-1)))
-print('Greatest Decrease in Profits: ' + str(Months_list[int(minIndex)]) + ' $' + str(minVal))
 print('Greatest Increase in Profits: ' + str(Months_list[int(maxIndex)]) + ' $' + str(maxVal))
+print('Greatest Decrease in Profits: ' + str(Months_list[int(minIndex)]) + ' $' + str(minVal))
 
 file.close()
 
