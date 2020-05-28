@@ -20,7 +20,7 @@ Canidate_Count = dict((x,Candidate.count(x))for x in set(Candidate))
 Khan_Votes = f'{Canidate_Count["Khan"]}'
 Correy_Votes = f'{Canidate_Count["Correy"]}'
 Li_Votes = f'{Canidate_Count["Li"]}'
-
+Tooley_Votes = f'{Canidate_Count["O'Tooley"]}'
 # total_votes = len(Voter_ID)
 # print('text')
 # print('Election Results')
@@ -32,7 +32,7 @@ Li_Votes = f'{Canidate_Count["Li"]}'
 # print('Li: ' + str("{0:.3%}".format(int(Li_Votes)/int(total_votes))) + ' (' + Li_Votes + ')')
 # # print("O'Tooley: " + str("{0:.2%}".format(int(Tooley_Votes)/int(total_votes))) + ' (' + Tooley_Votes + ')')
 # print('-' * 50)
-print(f'{Canidate_Count["O'Tooley"]}
+print(f'{Canidate_Count["O'Tooley"]}')
 # print('-' * 50)
 
 # maxVal = max(Canidate_Count[])
