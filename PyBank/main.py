@@ -23,13 +23,13 @@ with open(csvpath) as csvfile:
         total = sum(Profit_Loss_list)
 
     #calculation of profit/loss from month to month
-    res = [(Profit_Loss_list[i] - Profit_Loss_list[i-1]) for i in range(len(Profit_Loss_list))]
+    difference = [(Profit_Loss_list[i] - Profit_Loss_list[i-1]) for i in range(len(Profit_Loss_list))]
 
 #find max value from calulation
-maxVal = max(res)
-minVal = min(res)
-maxIndex = res.index(maxVal)
-minIndex = res.index(minVal)
+maxVal = max(difference)
+minVal = min(difference)
+maxIndex = difference.index(maxVal)
+minIndex = difference.index(minVal)
 
 #Terminal output of Analysis
 print('text')
@@ -38,7 +38,7 @@ print(f'-'*50)
 print(f'Total Months: ' + str(len(Months_list)))
 print(f'Total: $' + str(total))
 print('Average Change: $' +
-      '{: .2f}'.format(int(sum(res) - res[0])/(len(Months_list)-1)))
+      '{: .2f}'.format(int(sum(difference) - difference[0])/(len(Months_list)-1)))
 print('Greatest Increase in Profits: ' +
       str(Months_list[int(maxIndex)]) + ' $' + str(maxVal))
 print('Greatest Decrease in Profits: ' +
@@ -55,7 +55,7 @@ print('Financial Analysis')
 print(f'-'*50)
 print(f'Total Months: ' + str(len(Months_list)))
 print(f'Total: $' + str(total))
-print('Average Change: $' + '{: .2f}'.format(int(sum(res) - res[0])/(len(Months_list)-1)))
+print('Average Change: $' + '{: .2f}'.format(int(sum(difference) - difference[0])/(len(Months_list)-1)))
 print('Greatest Increase in Profits: ' + str(Months_list[int(maxIndex)]) + ' $' + str(maxVal))
 print('Greatest Decrease in Profits: ' + str(Months_list[int(minIndex)]) + ' $' + str(minVal))
 
