@@ -4,7 +4,6 @@ import csv
 csvpath = "/Users/specky3512/GitHub/Python-Challenge/PyPoll/Resources/election_data.csv"
 
 Voter_ID = []
-County = []
 Candidate = []
 
 with open(csvpath) as csvfile:
@@ -15,19 +14,26 @@ with open(csvpath) as csvfile:
     
     for row in csvreader:
         Voter_ID.append(row[0])
-        County.append(row[1])
         Candidate.append(row[2])
     
-print('text')
-print('Election Results')
-print('-' * 50)
-print('Total Votes: ' + str(len(Voter_ID)))
-print('-' * 50)
+Canidate_Count = dict((x,Candidate.count(x))for x in set(Candidate))
+Khan_Votes = f'{Canidate_Count["Khan"]}'
+Correy_Votes = f'{Canidate_Count["Correy"]}'
+Li_Votes = f'{Canidate_Count["Li"]}'
 
-dict((x,Candidate.count(x))for x in set(Candidate))
+# total_votes = len(Voter_ID)
+# print('text')
+# print('Election Results')
+# print('-' * 50)
+# print('Total Votes: ' + str(len(Voter_ID)))
+# print('-' * 50)
+# print('Khan: ' + str("{0:.3%}".format(int(Khan_Votes)/int(total_votes))) + ' (' + Khan_Votes + ')')
+# print('Correy: ' + str("{0:.3%}".format(int(Correy_Votes)/int(total_votes))) + ' (' + Correy_Votes + ')')
+# print('Li: ' + str("{0:.3%}".format(int(Li_Votes)/int(total_votes))) + ' (' + Li_Votes + ')')
+# # print("O'Tooley: " + str("{0:.2%}".format(int(Tooley_Votes)/int(total_votes))) + ' (' + Tooley_Votes + ')')
+# print('-' * 50)
+print(f'{Canidate_Count["O'Tooley"]}
+# print('-' * 50)
 
-# [[x, l.count(x)] for x in set(l)]
-# [['a', 1], ['b', 2]]
-# >> > dict((x, l.count(x)) for x in set(l))
-# {'a': 1, 'b': 2}
-print(dict((x, Candidate.count(x))for x in set(Candidate)))
+# maxVal = max(Canidate_Count[])
+print(maxVal)
