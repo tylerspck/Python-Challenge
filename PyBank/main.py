@@ -1,3 +1,4 @@
+import sys
 import os
 import csv
 
@@ -30,6 +31,7 @@ minVal = min(res)
 maxIndex = res.index(maxVal)
 minIndex = res.index(minVal)
 
+#Terminal output of Analysis
 print('text')
 print('Financial Analysis')
 print(f'-'*50)
@@ -42,13 +44,12 @@ print('Greatest Increase in Profits: ' +
 print('Greatest Decrease in Profits: ' +
       str(Months_list[int(minIndex)]) + ' $' + str(minVal))
 
-import sys
+#Creation of txt file
 output_path = os.path.join(
     "/Users/specky3512/GitHub/Python-Challenge/PyBank/analysis", 'Financial_Analysis.txt')
 file = open(output_path, 'w')
 sys.stdout = file
 
-#Print out of found values
 print('text')
 print('Financial Analysis')
 print(f'-'*50)
