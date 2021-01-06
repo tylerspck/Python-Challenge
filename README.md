@@ -1,6 +1,23 @@
-# Python-Challenge
-For the Python challege, i started off with PyBank first.  I was able to take the CSV file and create two lists from the csv file.  One list contained the Months and the other list contains the Profit/Loss.  Usin the length function, i was able to determine the number of entrys for the total number of months.  From the Profit/loss list, i created a new list (difference) with the difference from the current value from the previous value. found the total using the profit/lost list sum, the avaerage using the sum of the difference and dividing by the total months, and the max and min using the diffent list. With the max/min. i used .index to find the index for the max/min values and with the index was able to find the month/year from the month list corrisponding to the found array.
+# Financial Analysis + Election Poll Information Using Python Scripts
 
-Next was PyPoll. When running through the csv file, i created two lists; one for voter Id and one for the Candidate name.  I used lenght function on the voter id to find the total number of votes casted.  I created a dictionary that added each candidate from the list and counted how many times each was in the list.  i was able to pull the key from the dictionary that received the most votes or times in the dictionary.  This was used to find the winner.  I created a loop that stated each key in the dictionary, the value for each key and that value divided by the total number of vates casted.
+## Object
 
+1. Create a Python script that analyzes the (fictional) financial records of a company to calculate: 
+  * The total number of months included in the dataset
+  * The net total amount of "Profit/Losses" over the entire period
+  * The average of the changes in "Profit/Losses" over the entire period
+  * The greatest increase in profits (date and amount) over the entire period
+  * The greatest decrease in losses (date and amount) over the entire period
 
+2. Create a Python script that analyzes the votes in a (fictional) small-town election from a set of poll data in order to calculate: 
+  * The total number of votes cast
+  * The complete list of candidates who received votes
+  * The percentage of votes each candidate won
+  * The total number of votes each candidate won
+  * The winner of the election based on popular vote.
+
+## Data Sets
+
+1. Bank data: [budget_data.csv]
+
+2. Election data: [election_data.csv]
